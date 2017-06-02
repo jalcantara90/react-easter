@@ -1,0 +1,587 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?rdqgod');
+  src:  url('fonts/icomoon.eot?rdqgod#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rdqgod') format('truetype'),
+    url('fonts/icomoon.woff?rdqgod') format('woff'),
+    url('fonts/icomoon.svg?rdqgod#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+
+body{
+    font-family: 'Allerta', sans-serif;
+    margin:0;
+}
+
+table {
+    width:100%;
+}
+
+th {
+    background:#273b47;
+    color:white;
+    padding:10px 20px;
+    text-align:left;
+}
+
+td {
+    padding:20px;
+}
+
+table, th, td {
+    border: 1px solid #273b47;
+    border-collapse: collapse;
+}
+
+input, textarea {
+    outline:0;
+}
+
+input:focus, textarea:focus {
+    background: lightgrey;
+}
+
+.background {
+    background: #395667;
+    background-image: url('../images/background2x.png');
+    background-size: cover;
+}
+
+.portada.background.is-animated {
+    background-image: url('../images/team-platzi-azul-2.jpg');
+    animation: background-animation 15s ease-in-out;
+   
+}
+
+@keyframes background-animation {
+    0%{
+        background-size: 200%; 
+        background-position: center; 
+    }
+    20%{
+        background-position: right top; 
+    }
+    40% {
+        background-size:100%;
+        background-position: center; 
+    }
+    60%{
+        background-position: left top; 
+    }
+    80%{
+        background-position: left -100px; 
+    }
+    100% {
+        background-size: 200%; 
+        background-position: right -100px; 
+    }
+}
+
+.contenedor {
+    max-width:800px;
+    margin:auto;
+    position:relative;
+}
+
+.button{
+    border-radius: 12px;
+    background: linear-gradient(to left,#fe344e,#ff7250);
+    color: white;
+    border:none;
+    padding: 7px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration:none;
+}
+.portada {
+    color:white;
+    padding:20px;
+    height: 500px;
+}
+
+.titulo {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    margin-top:70px;
+}
+
+.titulo span {
+    text-decoration: underline;
+}
+
+.title-a {
+    font-size: 24px;
+    margin-top:0;
+}
+
+.title-b {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.guitarras h2 {
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.guitarras{
+    color : #1F313c;
+    margin-bottom:60px;
+}
+
+.menu {
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    right:0;
+}
+
+.menu a{
+    color:white;
+    text-decoration: none;
+}
+
+.menu li{
+    display: inline-block;
+    margin-left: 30px; 
+}
+
+.menu li:before {
+    content: '∘';
+    font-size: 50px;
+    line-height: 20px;
+    color: white;
+}
+
+.logotipo {
+    display: inline-block;
+    margin-left:0;
+}
+
+.guitarra {
+    border: 1px solid;
+    padding:10px 2em;
+    margin:10px 0 40px;
+    border-radius:3px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    min-height: 250px;
+    transition: .3s;
+}
+
+.guitarra:hover{
+    box-shadow: 10px 10px 0 #ff3149;
+}
+.guitarra:hover:nth-of-type(even) { 
+   box-shadow: -10px 10px 0 black;
+}
+
+.guitarra:nth-of-type(even) { /*nth-of-type sirve para elegir a los elementos que quieres aplicarles algo*/
+    justify-content: flex-end;
+}
+
+.guitarra-image {
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.guitarra:nth-of-type(even)  .guitarra-image{
+    position: absolute;
+    left:0;
+    right: initial;
+}
+
+.guitarra ol {
+    padding:0;
+    list-style: none;
+    counter-reset: features;
+}
+
+.guitarra li:before {
+    counter-increment: features;
+    content: counter(features) ". ";
+}
+
+.guitarra-name {
+    font-size: 3em;
+    margin: 0 0 .2em;
+    padding-bottom: .2em; 
+    border-bottom: 2px dashed #1e313b;
+}
+
+.header {
+    position:relative;
+}
+
+.footer{
+    background: #273b47;
+    padding:50px 10px;
+}
+
+.footer .contenedor{
+    display:flex;
+    justify-content:space-between;
+}
+
+.contacto{
+    display:flex;
+    width:300px;
+    flex-wrap:wrap;
+    align-items: center;
+    height:200px;
+}
+.contacto img {
+    display:block;
+}
+
+.contacto strong {
+    display:block;
+}
+
+.contacto a {
+    color: white;
+    text-decoration:none;
+    margin:10px 10px 10px 0;
+   
+}
+
+.formulario {
+    display:flex;
+    width:400px;
+    color:white;
+}
+
+.col1, .col2 {
+    display:flex;
+    flex-direction:column;
+}
+
+.col1 {
+    margin-right:15px;
+}
+
+.col2 {
+    align-items: flex-start;
+}
+
+.col2 .button {
+    margin-top:15px;
+}
+
+.intereses label{
+    font-size:12px;
+}
+
+.formulario label, .sexo , .intereses{
+    margin-bottom:10px;
+}
+
+.comentarios {
+    max-width: 290px;
+}
+
+.sexo {
+    margin-top:10px;
+}
+
+.tabla {
+    margin: 50px 0;
+}
+.burguer-button{
+    width:40px;
+    height:40px;
+    line-height: 40px;
+    border-radius:50%;
+    background: #395667;
+    text-align:center;
+    position:fixed;
+    left:20px;
+    top:20px;
+    cursor:pointer;
+    z-index:3;
+    color:white;
+    display:none;
+}
+
+video{
+    width: 100%;
+}
+.video-responsive-contenedor {
+    position:relative;
+    padding-top: 56.25%; 
+}
+
+.video-responsive.src{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+}
+
+@media screen and (max-width: 800px) {
+  /*Precios*/
+   .tabla {
+       margin: 50px 20px;
+   }
+   .tabla .contenedor{
+       overflow: auto;
+       border:1px solid #273b47;
+   }
+
+   /*Precios*/
+  
+   /* Portada */
+   .titulo{
+       font-size:45px;
+       margin-top:30px;
+   }
+   .title-a{
+       font-size:18px;
+   }
+   .portada{
+       height: auto;
+   }
+
+   .portada .button {
+       margin-bottom:30px;
+       display: inline-block;
+   }
+
+   /* Portada */
+   
+
+   /* Guitarras */
+   .guitarras{
+       text-align: center;
+   }
+
+   .left, .right{
+       float:none;
+       position:static;
+   }
+
+   .title-b{
+       margin : 0;
+   }
+
+   .guitarra li {
+       list-style: none;
+   }
+   .guitarra.b {
+       height:auto;
+   }
+
+   .contenedor-guitarra-b{
+       margin:0;
+       position:static;
+   }
+
+    .contenedor-guitarra-a {
+        padding:0;
+    }
+   /* Guitarras */
+}
+
+@media screen and (max-width: 650px) {
+    .header{
+        text-align:center;
+    }
+    .menu{
+       position:static;
+       display:block;
+    }
+
+    .logotipo{
+        margin:0;
+    }
+    .menu li:first-child{
+        margin:0;
+    }
+    .menu ul {
+        padding:0;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+      /* footer */
+     .footer .contenedor {
+         display:block;
+     }
+
+     .contacto{
+        margin:0 auto;
+        display:block
+
+     }
+     .contacto a {
+         display:block;
+     }
+
+     .formulario {
+         display:block;
+         margin: auto;
+         width:300px;
+     }
+
+     .sexo label {
+         display: block;
+     }
+
+     .intereses label{
+         display:block;
+         font-size:20px;
+     }
+     input[type="text"]{
+         margin-bottom: 20px;
+     }
+     input[type="text"], 
+     input[type="email"] {
+        font-size:20px;
+        padding: 5px;
+     }
+
+     textarea{
+         width:100%;
+     }
+
+     .col1 {
+         margin:0;
+     }
+     input[type="radio"], 
+     input[type="checkbox"] {
+         zoom: 1.5;
+     }
+
+
+     /* footer */
+}
+
+@media screen and (max-width:500px) {
+    /* portada */
+    .portada .button {
+        display: block; 
+    }
+   .col2 {
+        align-items: stretch;
+    }
+    .col2 .button {
+        width:100%;
+    }
+    .precios .header .logotipo{
+        margin:50px 0;
+    }
+    .burguer-button{
+         display: inline-block;
+    }
+    .portada .contenedor{
+        position:static;
+    }
+    .header .contenedor {
+        position:static;
+    }
+
+    .header {
+        position:static;
+    }
+    .menu {
+        background: rgba(255, 60, 88, .8);
+        position:fixed;
+        width:100%;
+        left:-100%;
+        top:0;
+        bottom:0;
+        right:0;
+        z-index: 2;
+        display:flex;
+        align-items: center;
+        transition:300ms;
+    }
+
+    .menu.active{
+        left:0;
+    }
+
+    .menu ul{
+        flex:1;
+    }
+    .portada {
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .title-a {
+        font-size: 12px;
+    }
+    
+    .menu li{
+        display:block;
+        border-bottom: 1px solid white;
+        margin:0;
+        padding:8px 0;
+    }
+
+    .menu li:first-child{
+        border-top: 1px solid white;
+    }
+    .menu li:before {
+        display:none;
+    }
+    /* portada */
+
+    /* guitarra */
+
+    .guitarra img {
+        width: 200px;
+    }
+    .title-b {
+        font-size: 30px;
+    }
+     /* guitarra */
+     
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .portada{
+        background-image:url('../images/background2x.png');
+    }
+}
